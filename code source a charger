@@ -1,0 +1,24 @@
+         
+int capteur;         
+           
+void setup() {
+  
+  //Déclaration du pin digital 7 du Arduino comme entrée pour les informations
+  //en provennance du capteur de proximité
+  pinMode(7, INPUT);  
+
+  //Activation du Serial Monitor  
+  Serial.begin(9600);
+
+}
+
+void loop(){
+  //Mémorisation des valeurs enprovennance du capteur dans la variable "capteur"
+  capteur = digitalRead(7); 
+  
+  //Affichage des valeurs fournies par le capteur
+  Serial.println(capteur);
+
+    delay(150);
+
+}
